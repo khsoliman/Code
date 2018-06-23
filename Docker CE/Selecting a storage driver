@@ -1,0 +1,15 @@
+How to tell your distribution docker adaptor is:
+    [user@khsoliman1 ~]$ docker info | grep Storage
+WARNING: devicemapper: usage of loopback devices is strongly discouraged for production use.
+         Use `--storage-opt dm.thinpooldev` to specify a custom block storage device.
+Storage Driver: devicemapper
+
+As root go to /etc/docker
+vim daemon.json and add the following lines:
+
+{
+        "storage-driver":"devicemapper"
+}
+
+restart docker, if you have images on the system before this change you will have to export them and then reimport them:
+    systemctl restart docker

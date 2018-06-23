@@ -1,0 +1,15 @@
+On LinuxAcademy cloud server install some prereq tools:
+    sudo yum install yum-utils device-mapper-persistent-data lvm2
+
+Configure Docker CE yum repo
+    yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+
+Update YUM repos:
+    sudo yum Update
+
+Install docker CE packages:
+    yum install docker-ce
+    
+Once installtion is complete, enable docker service, start it:
+    systemctl enable docker && systemctl start docker && systemctl status docker
