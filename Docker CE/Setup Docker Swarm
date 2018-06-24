@@ -8,3 +8,13 @@ To add a worker to this swarm, run the following command:
     docker swarm join --token SWMTKN-1-4m7o65igcfzwq2uyy7mp2x48hnvolgtb995f1jqbanea8uvg5c-cbk2fg1xuvyg4a13avcjqwxr3 72.31.97.99:2377
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+[root@khsoliman1 docker]# docker swarm join-token worker
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-4m7o65igcfzwq2uyy7mp2x48hnvolgtb995f1jqbanea8uvg5c-cbk2fg1xuvyg4a13avcjqwxr3 72.31.97.99:2377
+
+[root@khsoliman1 docker]# docker swarm join-token manager
+To add a manager to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-4m7o65igcfzwq2uyy7mp2x48hnvolgtb995f1jqbanea8uvg5c-apemljnposf3hgkugxji5dbkk 72.31.97.99:2377
