@@ -1,0 +1,18 @@
+docker container run --rm -it --name ucp -v /var/run/docker.sock:/var/run/docker.sock docker/ucp:/2.2.4 install --host-address 172.31.97.99 --interactive
+
+root@khsoliman1 ~]# docker container run --rm -it --name ucp -v /var/run/docker.sock:/var/run/docker.sock docker/ucp:2.2.4 install --host-address 172.31.97.99
+ --interactive
+Unable to find image 'docker/ucp:2.2.4' locally
+2.2.4: Pulling from docker/ucp
+b56ae66c2937: Pull complete 
+68de5ce90bd1: Pull complete 
+d2de1fff8042: Pull complete 
+Digest: sha256:2b819b92d2209c0a5680fcee3f99c1090a9d4f1e6fea3003a9a661cbd16cc851
+Status: Downloaded newer image for docker/ucp:2.2.4
+INFO[0000] Verifying your system is compatible with UCP 2.2.4 (168ec746e) 
+INFO[0000] Your engine version 18.03.1-ce, build 9ee9f40 (3.10.0-862.3.3.el7.x86_64) is compatible 
+FATA[0000] This swarm-mode manager already has an address of 72.31.97.99.  You cannot specify a different '--host-address' during the UCP install on a pre-exis
+ting swarm.  If you want to use the existing address, re-run the install without specifying '--host-address'  If you want to use an alternate address, you must
+ specify the '--advertise-addr' argument to 'docker swarm init' or leave the swarm and allow the UCP installer to initialize with your preferred '--host-addres
+s' 
+[root@khsoliman1 ~]# docker container run --rm -it --name ucp -v /var/run/docker.sock:/var/run/docker.sock docker/ucp:2.2.4 install --interactive
